@@ -1,0 +1,1439 @@
+{
+  "run_utc": "2026-11-11T07:16:42.044206+00:00",
+  "python": "3.10.12",
+  "node": "v22.23.4",
+  "setup": {
+    "transport": "HTTP/1.1 client to local Python HTTP server (server responds HTTP/1.0)",
+    "bind": "127.0.0.1 only",
+    "abort_after_ms": 100,
+    "handler_delay_before_commit_ms": 400,
+    "repetitions_per_case": 5,
+    "cancellation_propagation": "none",
+    "idempotency": "SQLite UNIQUE constraint on supplied key; durable within this local database"
+  },
+  "summary": [
+    {
+      "case": "control",
+      "trials": 5,
+      "rows_per_trial": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "case": "abort_only",
+      "trials": 5,
+      "rows_per_trial": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "case": "abort_then_retry",
+      "trials": 5,
+      "rows_per_trial": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "case": "same_key_retry",
+      "trials": 5,
+      "rows_per_trial": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "results": [
+    {
+      "case": "control",
+      "trial": "control-1",
+      "rows": 1,
+      "orders": [
+        [
+          1,
+          "first",
+          null
+        ]
+      ]
+    },
+    {
+      "case": "control",
+      "trial": "control-2",
+      "rows": 1,
+      "orders": [
+        [
+          2,
+          "first",
+          null
+        ]
+      ]
+    },
+    {
+      "case": "control",
+      "trial": "control-3",
+      "rows": 1,
+      "orders": [
+        [
+          3,
+          "first",
+          null
+        ]
+      ]
+    },
+    {
+      "case": "control",
+      "trial": "control-4",
+      "rows": 1,
+      "orders": [
+        [
+          4,
+          "first",
+          null
+        ]
+      ]
+    },
+    {
+      "case": "control",
+      "trial": "control-5",
+      "rows": 1,
+      "orders": [
+        [
+          5,
+          "first",
+          null
+        ]
+      ]
+    },
+    {
+      "case": "abort_only",
+      "trial": "abort_only-1",
+      "rows": 1,
+      "orders": [
+        [
+          6,
+          "first",
+          null
+        ]
+      ]
+    },
+    {
+      "case": "abort_only",
+      "trial": "abort_only-2",
+      "rows": 1,
+      "orders": [
+        [
+          7,
+          "first",
+          null
+        ]
+      ]
+    },
+    {
+      "case": "abort_only",
+      "trial": "abort_only-3",
+      "rows": 1,
+      "orders": [
+        [
+          8,
+          "first",
+          null
+        ]
+      ]
+    },
+    {
+      "case": "abort_only",
+      "trial": "abort_only-4",
+      "rows": 1,
+      "orders": [
+        [
+          9,
+          "first",
+          null
+        ]
+      ]
+    },
+    {
+      "case": "abort_only",
+      "trial": "abort_only-5",
+      "rows": 1,
+      "orders": [
+        [
+          10,
+          "first",
+          null
+        ]
+      ]
+    },
+    {
+      "case": "abort_then_retry",
+      "trial": "abort_then_retry-1",
+      "rows": 2,
+      "orders": [
+        [
+          11,
+          "first",
+          null
+        ],
+        [
+          12,
+          "retry",
+          null
+        ]
+      ]
+    },
+    {
+      "case": "abort_then_retry",
+      "trial": "abort_then_retry-2",
+      "rows": 2,
+      "orders": [
+        [
+          13,
+          "first",
+          null
+        ],
+        [
+          14,
+          "retry",
+          null
+        ]
+      ]
+    },
+    {
+      "case": "abort_then_retry",
+      "trial": "abort_then_retry-3",
+      "rows": 2,
+      "orders": [
+        [
+          15,
+          "first",
+          null
+        ],
+        [
+          16,
+          "retry",
+          null
+        ]
+      ]
+    },
+    {
+      "case": "abort_then_retry",
+      "trial": "abort_then_retry-4",
+      "rows": 2,
+      "orders": [
+        [
+          17,
+          "first",
+          null
+        ],
+        [
+          18,
+          "retry",
+          null
+        ]
+      ]
+    },
+    {
+      "case": "abort_then_retry",
+      "trial": "abort_then_retry-5",
+      "rows": 2,
+      "orders": [
+        [
+          19,
+          "first",
+          null
+        ],
+        [
+          20,
+          "retry",
+          null
+        ]
+      ]
+    },
+    {
+      "case": "same_key_retry",
+      "trial": "same_key_retry-1",
+      "rows": 1,
+      "orders": [
+        [
+          21,
+          "first",
+          "same_key_retry-1"
+        ]
+      ]
+    },
+    {
+      "case": "same_key_retry",
+      "trial": "same_key_retry-2",
+      "rows": 1,
+      "orders": [
+        [
+          22,
+          "first",
+          "same_key_retry-2"
+        ]
+      ]
+    },
+    {
+      "case": "same_key_retry",
+      "trial": "same_key_retry-3",
+      "rows": 1,
+      "orders": [
+        [
+          23,
+          "first",
+          "same_key_retry-3"
+        ]
+      ]
+    },
+    {
+      "case": "same_key_retry",
+      "trial": "same_key_retry-4",
+      "rows": 1,
+      "orders": [
+        [
+          24,
+          "first",
+          "same_key_retry-4"
+        ]
+      ]
+    },
+    {
+      "case": "same_key_retry",
+      "trial": "same_key_retry-5",
+      "rows": 1,
+      "orders": [
+        [
+          25,
+          "first",
+          "same_key_retry-5"
+        ]
+      ]
+    }
+  ],
+  "trace": [
+    {
+      "ms": 17,
+      "event": "client_request_started",
+      "trial": "control-1",
+      "request": "first"
+    },
+    {
+      "ms": 46,
+      "event": "server_received",
+      "trial": "control-1",
+      "request": "first",
+      "key": null
+    },
+    {
+      "ms": 447,
+      "event": "database_committed",
+      "trial": "control-1",
+      "request": "first",
+      "order_id": 1
+    },
+    {
+      "ms": 448,
+      "event": "server_response_written",
+      "trial": "control-1",
+      "request": "first"
+    },
+    {
+      "ms": 452,
+      "event": "client_response",
+      "trial": "control-1",
+      "request": "first",
+      "status": 200,
+      "order_id": 1,
+      "created": true
+    },
+    {
+      "ms": 1020,
+      "event": "client_request_started",
+      "trial": "control-2",
+      "request": "first"
+    },
+    {
+      "ms": 1042,
+      "event": "server_received",
+      "trial": "control-2",
+      "request": "first",
+      "key": null
+    },
+    {
+      "ms": 1444,
+      "event": "database_committed",
+      "trial": "control-2",
+      "request": "first",
+      "order_id": 2
+    },
+    {
+      "ms": 1445,
+      "event": "server_response_written",
+      "trial": "control-2",
+      "request": "first"
+    },
+    {
+      "ms": 1449,
+      "event": "client_response",
+      "trial": "control-2",
+      "request": "first",
+      "status": 200,
+      "order_id": 2,
+      "created": true
+    },
+    {
+      "ms": 2019,
+      "event": "client_request_started",
+      "trial": "control-3",
+      "request": "first"
+    },
+    {
+      "ms": 2042,
+      "event": "server_received",
+      "trial": "control-3",
+      "request": "first",
+      "key": null
+    },
+    {
+      "ms": 2443,
+      "event": "database_committed",
+      "trial": "control-3",
+      "request": "first",
+      "order_id": 3
+    },
+    {
+      "ms": 2444,
+      "event": "server_response_written",
+      "trial": "control-3",
+      "request": "first"
+    },
+    {
+      "ms": 2449,
+      "event": "client_response",
+      "trial": "control-3",
+      "request": "first",
+      "status": 200,
+      "order_id": 3,
+      "created": true
+    },
+    {
+      "ms": 3018,
+      "event": "client_request_started",
+      "trial": "control-4",
+      "request": "first"
+    },
+    {
+      "ms": 3041,
+      "event": "server_received",
+      "trial": "control-4",
+      "request": "first",
+      "key": null
+    },
+    {
+      "ms": 3442,
+      "event": "database_committed",
+      "trial": "control-4",
+      "request": "first",
+      "order_id": 4
+    },
+    {
+      "ms": 3443,
+      "event": "server_response_written",
+      "trial": "control-4",
+      "request": "first"
+    },
+    {
+      "ms": 3447,
+      "event": "client_response",
+      "trial": "control-4",
+      "request": "first",
+      "status": 200,
+      "order_id": 4,
+      "created": true
+    },
+    {
+      "ms": 4019,
+      "event": "client_request_started",
+      "trial": "control-5",
+      "request": "first"
+    },
+    {
+      "ms": 4046,
+      "event": "server_received",
+      "trial": "control-5",
+      "request": "first",
+      "key": null
+    },
+    {
+      "ms": 4448,
+      "event": "database_committed",
+      "trial": "control-5",
+      "request": "first",
+      "order_id": 5
+    },
+    {
+      "ms": 4448,
+      "event": "server_response_written",
+      "trial": "control-5",
+      "request": "first"
+    },
+    {
+      "ms": 4453,
+      "event": "client_response",
+      "trial": "control-5",
+      "request": "first",
+      "status": 200,
+      "order_id": 5,
+      "created": true
+    },
+    {
+      "ms": 5020,
+      "event": "client_request_started",
+      "trial": "abort_only-1",
+      "request": "first"
+    },
+    {
+      "ms": 5045,
+      "event": "server_received",
+      "trial": "abort_only-1",
+      "request": "first",
+      "key": null
+    },
+    {
+      "ms": 5121,
+      "event": "client_abort_sent",
+      "trial": "abort_only-1",
+      "request": "first"
+    },
+    {
+      "ms": 5122,
+      "event": "client_error",
+      "trial": "abort_only-1",
+      "request": "first",
+      "name": "AbortError"
+    },
+    {
+      "ms": 5446,
+      "event": "database_committed",
+      "trial": "abort_only-1",
+      "request": "first",
+      "order_id": 6
+    },
+    {
+      "ms": 5446,
+      "event": "server_response_connection_closed",
+      "trial": "abort_only-1",
+      "request": "first"
+    },
+    {
+      "ms": 5690,
+      "event": "client_request_started",
+      "trial": "abort_only-2",
+      "request": "first"
+    },
+    {
+      "ms": 5713,
+      "event": "server_received",
+      "trial": "abort_only-2",
+      "request": "first",
+      "key": null
+    },
+    {
+      "ms": 5790,
+      "event": "client_abort_sent",
+      "trial": "abort_only-2",
+      "request": "first"
+    },
+    {
+      "ms": 5792,
+      "event": "client_error",
+      "trial": "abort_only-2",
+      "request": "first",
+      "name": "AbortError"
+    },
+    {
+      "ms": 6114,
+      "event": "database_committed",
+      "trial": "abort_only-2",
+      "request": "first",
+      "order_id": 7
+    },
+    {
+      "ms": 6114,
+      "event": "server_response_connection_closed",
+      "trial": "abort_only-2",
+      "request": "first"
+    },
+    {
+      "ms": 6360,
+      "event": "client_request_started",
+      "trial": "abort_only-3",
+      "request": "first"
+    },
+    {
+      "ms": 6385,
+      "event": "server_received",
+      "trial": "abort_only-3",
+      "request": "first",
+      "key": null
+    },
+    {
+      "ms": 6461,
+      "event": "client_abort_sent",
+      "trial": "abort_only-3",
+      "request": "first"
+    },
+    {
+      "ms": 6463,
+      "event": "client_error",
+      "trial": "abort_only-3",
+      "request": "first",
+      "name": "AbortError"
+    },
+    {
+      "ms": 6786,
+      "event": "database_committed",
+      "trial": "abort_only-3",
+      "request": "first",
+      "order_id": 8
+    },
+    {
+      "ms": 6786,
+      "event": "server_response_connection_closed",
+      "trial": "abort_only-3",
+      "request": "first"
+    },
+    {
+      "ms": 7034,
+      "event": "client_request_started",
+      "trial": "abort_only-4",
+      "request": "first"
+    },
+    {
+      "ms": 7059,
+      "event": "server_received",
+      "trial": "abort_only-4",
+      "request": "first",
+      "key": null
+    },
+    {
+      "ms": 7135,
+      "event": "client_abort_sent",
+      "trial": "abort_only-4",
+      "request": "first"
+    },
+    {
+      "ms": 7137,
+      "event": "client_error",
+      "trial": "abort_only-4",
+      "request": "first",
+      "name": "AbortError"
+    },
+    {
+      "ms": 7460,
+      "event": "database_committed",
+      "trial": "abort_only-4",
+      "request": "first",
+      "order_id": 9
+    },
+    {
+      "ms": 7460,
+      "event": "server_response_connection_closed",
+      "trial": "abort_only-4",
+      "request": "first"
+    },
+    {
+      "ms": 7706,
+      "event": "client_request_started",
+      "trial": "abort_only-5",
+      "request": "first"
+    },
+    {
+      "ms": 7730,
+      "event": "server_received",
+      "trial": "abort_only-5",
+      "request": "first",
+      "key": null
+    },
+    {
+      "ms": 7806,
+      "event": "client_abort_sent",
+      "trial": "abort_only-5",
+      "request": "first"
+    },
+    {
+      "ms": 7808,
+      "event": "client_error",
+      "trial": "abort_only-5",
+      "request": "first",
+      "name": "AbortError"
+    },
+    {
+      "ms": 8132,
+      "event": "database_committed",
+      "trial": "abort_only-5",
+      "request": "first",
+      "order_id": 10
+    },
+    {
+      "ms": 8132,
+      "event": "server_response_connection_closed",
+      "trial": "abort_only-5",
+      "request": "first"
+    },
+    {
+      "ms": 8376,
+      "event": "client_request_started",
+      "trial": "abort_then_retry-1",
+      "request": "first"
+    },
+    {
+      "ms": 8399,
+      "event": "server_received",
+      "trial": "abort_then_retry-1",
+      "request": "first",
+      "key": null
+    },
+    {
+      "ms": 8477,
+      "event": "client_abort_sent",
+      "trial": "abort_then_retry-1",
+      "request": "first"
+    },
+    {
+      "ms": 8479,
+      "event": "client_error",
+      "trial": "abort_then_retry-1",
+      "request": "first",
+      "name": "AbortError"
+    },
+    {
+      "ms": 8479,
+      "event": "client_request_started",
+      "trial": "abort_then_retry-1",
+      "request": "retry"
+    },
+    {
+      "ms": 8480,
+      "event": "server_received",
+      "trial": "abort_then_retry-1",
+      "request": "retry",
+      "key": null
+    },
+    {
+      "ms": 8800,
+      "event": "database_committed",
+      "trial": "abort_then_retry-1",
+      "request": "first",
+      "order_id": 11
+    },
+    {
+      "ms": 8800,
+      "event": "server_response_connection_closed",
+      "trial": "abort_then_retry-1",
+      "request": "first"
+    },
+    {
+      "ms": 8881,
+      "event": "database_committed",
+      "trial": "abort_then_retry-1",
+      "request": "retry",
+      "order_id": 12
+    },
+    {
+      "ms": 8882,
+      "event": "server_response_written",
+      "trial": "abort_then_retry-1",
+      "request": "retry"
+    },
+    {
+      "ms": 8885,
+      "event": "client_response",
+      "trial": "abort_then_retry-1",
+      "request": "retry",
+      "status": 200,
+      "order_id": 12,
+      "created": true
+    },
+    {
+      "ms": 9452,
+      "event": "client_request_started",
+      "trial": "abort_then_retry-2",
+      "request": "first"
+    },
+    {
+      "ms": 9475,
+      "event": "server_received",
+      "trial": "abort_then_retry-2",
+      "request": "first",
+      "key": null
+    },
+    {
+      "ms": 9552,
+      "event": "client_abort_sent",
+      "trial": "abort_then_retry-2",
+      "request": "first"
+    },
+    {
+      "ms": 9554,
+      "event": "client_error",
+      "trial": "abort_then_retry-2",
+      "request": "first",
+      "name": "AbortError"
+    },
+    {
+      "ms": 9554,
+      "event": "client_request_started",
+      "trial": "abort_then_retry-2",
+      "request": "retry"
+    },
+    {
+      "ms": 9556,
+      "event": "server_received",
+      "trial": "abort_then_retry-2",
+      "request": "retry",
+      "key": null
+    },
+    {
+      "ms": 9876,
+      "event": "database_committed",
+      "trial": "abort_then_retry-2",
+      "request": "first",
+      "order_id": 13
+    },
+    {
+      "ms": 9876,
+      "event": "server_response_connection_closed",
+      "trial": "abort_then_retry-2",
+      "request": "first"
+    },
+    {
+      "ms": 9962,
+      "event": "database_committed",
+      "trial": "abort_then_retry-2",
+      "request": "retry",
+      "order_id": 14
+    },
+    {
+      "ms": 9962,
+      "event": "server_response_written",
+      "trial": "abort_then_retry-2",
+      "request": "retry"
+    },
+    {
+      "ms": 9966,
+      "event": "client_response",
+      "trial": "abort_then_retry-2",
+      "request": "retry",
+      "status": 200,
+      "order_id": 14,
+      "created": true
+    },
+    {
+      "ms": 10535,
+      "event": "client_request_started",
+      "trial": "abort_then_retry-3",
+      "request": "first"
+    },
+    {
+      "ms": 10558,
+      "event": "server_received",
+      "trial": "abort_then_retry-3",
+      "request": "first",
+      "key": null
+    },
+    {
+      "ms": 10635,
+      "event": "client_abort_sent",
+      "trial": "abort_then_retry-3",
+      "request": "first"
+    },
+    {
+      "ms": 10636,
+      "event": "client_error",
+      "trial": "abort_then_retry-3",
+      "request": "first",
+      "name": "AbortError"
+    },
+    {
+      "ms": 10636,
+      "event": "client_request_started",
+      "trial": "abort_then_retry-3",
+      "request": "retry"
+    },
+    {
+      "ms": 10638,
+      "event": "server_received",
+      "trial": "abort_then_retry-3",
+      "request": "retry",
+      "key": null
+    },
+    {
+      "ms": 10959,
+      "event": "database_committed",
+      "trial": "abort_then_retry-3",
+      "request": "first",
+      "order_id": 15
+    },
+    {
+      "ms": 10959,
+      "event": "server_response_connection_closed",
+      "trial": "abort_then_retry-3",
+      "request": "first"
+    },
+    {
+      "ms": 11039,
+      "event": "database_committed",
+      "trial": "abort_then_retry-3",
+      "request": "retry",
+      "order_id": 16
+    },
+    {
+      "ms": 11040,
+      "event": "server_response_written",
+      "trial": "abort_then_retry-3",
+      "request": "retry"
+    },
+    {
+      "ms": 11044,
+      "event": "client_response",
+      "trial": "abort_then_retry-3",
+      "request": "retry",
+      "status": 200,
+      "order_id": 16,
+      "created": true
+    },
+    {
+      "ms": 11610,
+      "event": "client_request_started",
+      "trial": "abort_then_retry-4",
+      "request": "first"
+    },
+    {
+      "ms": 11634,
+      "event": "server_received",
+      "trial": "abort_then_retry-4",
+      "request": "first",
+      "key": null
+    },
+    {
+      "ms": 11711,
+      "event": "client_abort_sent",
+      "trial": "abort_then_retry-4",
+      "request": "first"
+    },
+    {
+      "ms": 11712,
+      "event": "client_error",
+      "trial": "abort_then_retry-4",
+      "request": "first",
+      "name": "AbortError"
+    },
+    {
+      "ms": 11712,
+      "event": "client_request_started",
+      "trial": "abort_then_retry-4",
+      "request": "retry"
+    },
+    {
+      "ms": 11714,
+      "event": "server_received",
+      "trial": "abort_then_retry-4",
+      "request": "retry",
+      "key": null
+    },
+    {
+      "ms": 12035,
+      "event": "database_committed",
+      "trial": "abort_then_retry-4",
+      "request": "first",
+      "order_id": 17
+    },
+    {
+      "ms": 12035,
+      "event": "server_response_connection_closed",
+      "trial": "abort_then_retry-4",
+      "request": "first"
+    },
+    {
+      "ms": 12115,
+      "event": "database_committed",
+      "trial": "abort_then_retry-4",
+      "request": "retry",
+      "order_id": 18
+    },
+    {
+      "ms": 12115,
+      "event": "server_response_written",
+      "trial": "abort_then_retry-4",
+      "request": "retry"
+    },
+    {
+      "ms": 12119,
+      "event": "client_response",
+      "trial": "abort_then_retry-4",
+      "request": "retry",
+      "status": 200,
+      "order_id": 18,
+      "created": true
+    },
+    {
+      "ms": 12687,
+      "event": "client_request_started",
+      "trial": "abort_then_retry-5",
+      "request": "first"
+    },
+    {
+      "ms": 12711,
+      "event": "server_received",
+      "trial": "abort_then_retry-5",
+      "request": "first",
+      "key": null
+    },
+    {
+      "ms": 12788,
+      "event": "client_abort_sent",
+      "trial": "abort_then_retry-5",
+      "request": "first"
+    },
+    {
+      "ms": 12789,
+      "event": "client_error",
+      "trial": "abort_then_retry-5",
+      "request": "first",
+      "name": "AbortError"
+    },
+    {
+      "ms": 12790,
+      "event": "client_request_started",
+      "trial": "abort_then_retry-5",
+      "request": "retry"
+    },
+    {
+      "ms": 12792,
+      "event": "server_received",
+      "trial": "abort_then_retry-5",
+      "request": "retry",
+      "key": null
+    },
+    {
+      "ms": 13112,
+      "event": "database_committed",
+      "trial": "abort_then_retry-5",
+      "request": "first",
+      "order_id": 19
+    },
+    {
+      "ms": 13112,
+      "event": "server_response_connection_closed",
+      "trial": "abort_then_retry-5",
+      "request": "first"
+    },
+    {
+      "ms": 13193,
+      "event": "database_committed",
+      "trial": "abort_then_retry-5",
+      "request": "retry",
+      "order_id": 20
+    },
+    {
+      "ms": 13193,
+      "event": "server_response_written",
+      "trial": "abort_then_retry-5",
+      "request": "retry"
+    },
+    {
+      "ms": 13197,
+      "event": "client_response",
+      "trial": "abort_then_retry-5",
+      "request": "retry",
+      "status": 200,
+      "order_id": 20,
+      "created": true
+    },
+    {
+      "ms": 13766,
+      "event": "client_request_started",
+      "trial": "same_key_retry-1",
+      "request": "first"
+    },
+    {
+      "ms": 13791,
+      "event": "server_received",
+      "trial": "same_key_retry-1",
+      "request": "first",
+      "key": "same_key_retry-1"
+    },
+    {
+      "ms": 13866,
+      "event": "client_abort_sent",
+      "trial": "same_key_retry-1",
+      "request": "first"
+    },
+    {
+      "ms": 13868,
+      "event": "client_error",
+      "trial": "same_key_retry-1",
+      "request": "first",
+      "name": "AbortError"
+    },
+    {
+      "ms": 13868,
+      "event": "client_request_started",
+      "trial": "same_key_retry-1",
+      "request": "retry"
+    },
+    {
+      "ms": 13871,
+      "event": "server_received",
+      "trial": "same_key_retry-1",
+      "request": "retry",
+      "key": "same_key_retry-1"
+    },
+    {
+      "ms": 14194,
+      "event": "database_committed",
+      "trial": "same_key_retry-1",
+      "request": "first",
+      "order_id": 21
+    },
+    {
+      "ms": 14194,
+      "event": "server_response_connection_closed",
+      "trial": "same_key_retry-1",
+      "request": "first"
+    },
+    {
+      "ms": 14272,
+      "event": "duplicate_suppressed",
+      "trial": "same_key_retry-1",
+      "request": "retry",
+      "order_id": 21
+    },
+    {
+      "ms": 14272,
+      "event": "server_response_written",
+      "trial": "same_key_retry-1",
+      "request": "retry"
+    },
+    {
+      "ms": 14276,
+      "event": "client_response",
+      "trial": "same_key_retry-1",
+      "request": "retry",
+      "status": 200,
+      "order_id": 21,
+      "created": false
+    },
+    {
+      "ms": 14843,
+      "event": "client_request_started",
+      "trial": "same_key_retry-2",
+      "request": "first"
+    },
+    {
+      "ms": 14867,
+      "event": "server_received",
+      "trial": "same_key_retry-2",
+      "request": "first",
+      "key": "same_key_retry-2"
+    },
+    {
+      "ms": 14944,
+      "event": "client_abort_sent",
+      "trial": "same_key_retry-2",
+      "request": "first"
+    },
+    {
+      "ms": 14946,
+      "event": "client_error",
+      "trial": "same_key_retry-2",
+      "request": "first",
+      "name": "AbortError"
+    },
+    {
+      "ms": 14946,
+      "event": "client_request_started",
+      "trial": "same_key_retry-2",
+      "request": "retry"
+    },
+    {
+      "ms": 14949,
+      "event": "server_received",
+      "trial": "same_key_retry-2",
+      "request": "retry",
+      "key": "same_key_retry-2"
+    },
+    {
+      "ms": 15268,
+      "event": "database_committed",
+      "trial": "same_key_retry-2",
+      "request": "first",
+      "order_id": 22
+    },
+    {
+      "ms": 15268,
+      "event": "server_response_connection_closed",
+      "trial": "same_key_retry-2",
+      "request": "first"
+    },
+    {
+      "ms": 15349,
+      "event": "duplicate_suppressed",
+      "trial": "same_key_retry-2",
+      "request": "retry",
+      "order_id": 22
+    },
+    {
+      "ms": 15349,
+      "event": "server_response_written",
+      "trial": "same_key_retry-2",
+      "request": "retry"
+    },
+    {
+      "ms": 15354,
+      "event": "client_response",
+      "trial": "same_key_retry-2",
+      "request": "retry",
+      "status": 200,
+      "order_id": 22,
+      "created": false
+    },
+    {
+      "ms": 15929,
+      "event": "client_request_started",
+      "trial": "same_key_retry-3",
+      "request": "first"
+    },
+    {
+      "ms": 15956,
+      "event": "server_received",
+      "trial": "same_key_retry-3",
+      "request": "first",
+      "key": "same_key_retry-3"
+    },
+    {
+      "ms": 16029,
+      "event": "client_abort_sent",
+      "trial": "same_key_retry-3",
+      "request": "first"
+    },
+    {
+      "ms": 16030,
+      "event": "client_error",
+      "trial": "same_key_retry-3",
+      "request": "first",
+      "name": "AbortError"
+    },
+    {
+      "ms": 16030,
+      "event": "client_request_started",
+      "trial": "same_key_retry-3",
+      "request": "retry"
+    },
+    {
+      "ms": 16032,
+      "event": "server_received",
+      "trial": "same_key_retry-3",
+      "request": "retry",
+      "key": "same_key_retry-3"
+    },
+    {
+      "ms": 16357,
+      "event": "database_committed",
+      "trial": "same_key_retry-3",
+      "request": "first",
+      "order_id": 23
+    },
+    {
+      "ms": 16357,
+      "event": "server_response_connection_closed",
+      "trial": "same_key_retry-3",
+      "request": "first"
+    },
+    {
+      "ms": 16432,
+      "event": "duplicate_suppressed",
+      "trial": "same_key_retry-3",
+      "request": "retry",
+      "order_id": 23
+    },
+    {
+      "ms": 16432,
+      "event": "server_response_written",
+      "trial": "same_key_retry-3",
+      "request": "retry"
+    },
+    {
+      "ms": 16436,
+      "event": "client_response",
+      "trial": "same_key_retry-3",
+      "request": "retry",
+      "status": 200,
+      "order_id": 23,
+      "created": false
+    },
+    {
+      "ms": 17011,
+      "event": "client_request_started",
+      "trial": "same_key_retry-4",
+      "request": "first"
+    },
+    {
+      "ms": 17034,
+      "event": "server_received",
+      "trial": "same_key_retry-4",
+      "request": "first",
+      "key": "same_key_retry-4"
+    },
+    {
+      "ms": 17111,
+      "event": "client_abort_sent",
+      "trial": "same_key_retry-4",
+      "request": "first"
+    },
+    {
+      "ms": 17113,
+      "event": "client_error",
+      "trial": "same_key_retry-4",
+      "request": "first",
+      "name": "AbortError"
+    },
+    {
+      "ms": 17113,
+      "event": "client_request_started",
+      "trial": "same_key_retry-4",
+      "request": "retry"
+    },
+    {
+      "ms": 17115,
+      "event": "server_received",
+      "trial": "same_key_retry-4",
+      "request": "retry",
+      "key": "same_key_retry-4"
+    },
+    {
+      "ms": 17436,
+      "event": "database_committed",
+      "trial": "same_key_retry-4",
+      "request": "first",
+      "order_id": 24
+    },
+    {
+      "ms": 17436,
+      "event": "server_response_connection_closed",
+      "trial": "same_key_retry-4",
+      "request": "first"
+    },
+    {
+      "ms": 17515,
+      "event": "duplicate_suppressed",
+      "trial": "same_key_retry-4",
+      "request": "retry",
+      "order_id": 24
+    },
+    {
+      "ms": 17515,
+      "event": "server_response_written",
+      "trial": "same_key_retry-4",
+      "request": "retry"
+    },
+    {
+      "ms": 17519,
+      "event": "client_response",
+      "trial": "same_key_retry-4",
+      "request": "retry",
+      "status": 200,
+      "order_id": 24,
+      "created": false
+    },
+    {
+      "ms": 18086,
+      "event": "client_request_started",
+      "trial": "same_key_retry-5",
+      "request": "first"
+    },
+    {
+      "ms": 18110,
+      "event": "server_received",
+      "trial": "same_key_retry-5",
+      "request": "first",
+      "key": "same_key_retry-5"
+    },
+    {
+      "ms": 18187,
+      "event": "client_abort_sent",
+      "trial": "same_key_retry-5",
+      "request": "first"
+    },
+    {
+      "ms": 18189,
+      "event": "client_error",
+      "trial": "same_key_retry-5",
+      "request": "first",
+      "name": "AbortError"
+    },
+    {
+      "ms": 18189,
+      "event": "client_request_started",
+      "trial": "same_key_retry-5",
+      "request": "retry"
+    },
+    {
+      "ms": 18191,
+      "event": "server_received",
+      "trial": "same_key_retry-5",
+      "request": "retry",
+      "key": "same_key_retry-5"
+    },
+    {
+      "ms": 18511,
+      "event": "database_committed",
+      "trial": "same_key_retry-5",
+      "request": "first",
+      "order_id": 25
+    },
+    {
+      "ms": 18511,
+      "event": "server_response_connection_closed",
+      "trial": "same_key_retry-5",
+      "request": "first"
+    },
+    {
+      "ms": 18591,
+      "event": "duplicate_suppressed",
+      "trial": "same_key_retry-5",
+      "request": "retry",
+      "order_id": 25
+    },
+    {
+      "ms": 18591,
+      "event": "server_response_written",
+      "trial": "same_key_retry-5",
+      "request": "retry"
+    },
+    {
+      "ms": 18595,
+      "event": "client_response",
+      "trial": "same_key_retry-5",
+      "request": "retry",
+      "status": 200,
+      "order_id": 25,
+      "created": false
+    }
+  ]
+}
