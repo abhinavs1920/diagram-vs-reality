@@ -1,0 +1,29 @@
+DRAFT ONLY. User posts. Attach 01-abort-trace.png to post 1; 02-retry-results.png to post 2. Post 3 credits the source. No Impact Gate in this pilot.
+
+diagram vs reality #1
+
+client abort: 101 ms.
+database commit: 426 ms.
+
+local toy test, no cancellation propagation: fetch stopped waiting. the handler kept writing.
+
+the cancel button isn't a rollback button.
+
+---
+
+5 trials per case, local Node fetch → Python → SQLite:
+
+no abort: 1 order
+abort only: 1
+abort + retry: 2
+same-key retry: 1
+
+400 ms injected delay, 100 ms abort timer. the same-key case uses a UNIQUE constraint, not magic. cancellation-aware handlers can behave differently.
+
+---
+
+inspired by @hnasr's 'why it is very hard to cancel an HTTP request' (2021).
+
+this tests one small case, not the whole video.
+
+https://www.youtube.com/watch?v=WmPKzFYKijM
