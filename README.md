@@ -2,7 +2,7 @@
 
 The diagram says one thing. The system does another. This repo is where I test the difference.
 
-Each episode takes one claim, mechanism, or mental model - from a talk, a doc, or a belief everyone repeats - and checks it against a small, runnable experiment. Real code, real measurements, stated limits.
+Each episode takes one claim, mechanism, or mental model - from a talk, a doc, or a belief everyone repeats - and checks it against a small experiment you can run yourself.
 
 ## How every episode works
 
@@ -23,7 +23,7 @@ Local Node fetch to a Python HTTP handler writing to SQLite. 100 ms abort timer,
 
 ## Disagree? Good.
 
-If you ran one of these and got a different result, open an issue with your setup and your trace. A counterexample with evidence is the best possible contribution. That is the point of doing this in public.
+If you ran one of these and got a different result, open an issue with your setup and your trace. That's the whole reason for doing this in public.
 
 ## License
 
