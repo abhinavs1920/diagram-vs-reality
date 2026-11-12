@@ -1,0 +1,93 @@
+{
+  "setup": "real HTTPS to example.com (IP 104.20.23.154); DNS resolved once (1.4ms, excluded); raw sockets + ssl; HTTP/1.1 framing validated (status 200, content-length/chunked); 5 interleaved cold/warm pairs",
+  "pairs": [
+    {
+      "pair": 1,
+      "cold": {
+        "tcp_ms": 5.2,
+        "tls_ms": 10.2,
+        "handshake_ms": 15.4,
+        "request_ms": 59.7,
+        "total_ms": 75.1
+      },
+      "warm": {
+        "handshake_ms": 19.0,
+        "req1_total_ms": 76.7,
+        "req1_request_ms": 57.7,
+        "req2_request_ms": 14.5
+      }
+    },
+    {
+      "pair": 2,
+      "cold": {
+        "tcp_ms": 5.3,
+        "tls_ms": 10.0,
+        "handshake_ms": 15.3,
+        "request_ms": 57.3,
+        "total_ms": 72.6
+      },
+      "warm": {
+        "handshake_ms": 18.0,
+        "req1_total_ms": 76.4,
+        "req1_request_ms": 58.3,
+        "req2_request_ms": 12.6
+      }
+    },
+    {
+      "pair": 3,
+      "cold": {
+        "tcp_ms": 5.8,
+        "tls_ms": 10.6,
+        "handshake_ms": 16.3,
+        "request_ms": 60.5,
+        "total_ms": 76.9
+      },
+      "warm": {
+        "handshake_ms": 19.9,
+        "req1_total_ms": 79.0,
+        "req1_request_ms": 59.0,
+        "req2_request_ms": 13.6
+      }
+    },
+    {
+      "pair": 4,
+      "cold": {
+        "tcp_ms": 5.1,
+        "tls_ms": 11.2,
+        "handshake_ms": 16.3,
+        "request_ms": 57.0,
+        "total_ms": 73.3
+      },
+      "warm": {
+        "handshake_ms": 19.4,
+        "req1_total_ms": 75.4,
+        "req1_request_ms": 56.0,
+        "req2_request_ms": 10.2
+      }
+    },
+    {
+      "pair": 5,
+      "cold": {
+        "tcp_ms": 6.9,
+        "tls_ms": 13.9,
+        "handshake_ms": 20.8,
+        "request_ms": 58.2,
+        "total_ms": 79.1
+      },
+      "warm": {
+        "handshake_ms": 23.8,
+        "req1_total_ms": 88.4,
+        "req1_request_ms": 64.6,
+        "req2_request_ms": 11.1
+      }
+    }
+  ],
+  "summary": {
+    "cold_handshake_ms": 16.3,
+    "cold_request_ms": 58.2,
+    "cold_total_ms": 75.1,
+    "warm_req1_total_ms": 76.7,
+    "warm_req2_request_ms": 12.6,
+    "cold_total_over_warm_req2": 6.0
+  }
+}
