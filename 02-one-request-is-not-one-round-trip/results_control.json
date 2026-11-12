@@ -1,0 +1,201 @@
+{
+  "setup": "CONTROL: same paired design as v2, interleaved variants; default (Nagle on) vs TCP_NODELAY=1 before connect; host example.com (104.20.23.154); DNS 0.9ms excluded; 5 pairs per variant",
+  "pairs": [
+    {
+      "pair": 1,
+      "nodelay": false,
+      "tls_version": "TLSv1.3",
+      "cipher": "TLS_AES_256_GCM_SHA384",
+      "cold": {
+        "tcp_ms": 1.6,
+        "tls_ms": 5.5,
+        "handshake_ms": 7.1,
+        "request_ms": 51.7,
+        "total_ms": 58.9
+      },
+      "warm": {
+        "handshake_ms": 6.8,
+        "req1_total_ms": 59.6,
+        "req2_request_ms": 11.3
+      }
+    },
+    {
+      "pair": 1,
+      "nodelay": true,
+      "tls_version": "TLSv1.3",
+      "cipher": "TLS_AES_256_GCM_SHA384",
+      "cold": {
+        "tcp_ms": 2.1,
+        "tls_ms": 6.1,
+        "handshake_ms": 8.2,
+        "request_ms": 8.0,
+        "total_ms": 16.2
+      },
+      "warm": {
+        "handshake_ms": 6.6,
+        "req1_total_ms": 17.6,
+        "req2_request_ms": 7.6
+      }
+    },
+    {
+      "pair": 2,
+      "nodelay": false,
+      "tls_version": "TLSv1.3",
+      "cipher": "TLS_AES_256_GCM_SHA384",
+      "cold": {
+        "tcp_ms": 1.7,
+        "tls_ms": 4.8,
+        "handshake_ms": 6.6,
+        "request_ms": 53.5,
+        "total_ms": 60.1
+      },
+      "warm": {
+        "handshake_ms": 6.9,
+        "req1_total_ms": 59.8,
+        "req2_request_ms": 9.8
+      }
+    },
+    {
+      "pair": 2,
+      "nodelay": true,
+      "tls_version": "TLSv1.3",
+      "cipher": "TLS_AES_256_GCM_SHA384",
+      "cold": {
+        "tcp_ms": 2.0,
+        "tls_ms": 5.6,
+        "handshake_ms": 7.7,
+        "request_ms": 9.2,
+        "total_ms": 16.9
+      },
+      "warm": {
+        "handshake_ms": 9.0,
+        "req1_total_ms": 19.8,
+        "req2_request_ms": 12.1
+      }
+    },
+    {
+      "pair": 3,
+      "nodelay": false,
+      "tls_version": "TLSv1.3",
+      "cipher": "TLS_AES_256_GCM_SHA384",
+      "cold": {
+        "tcp_ms": 7.7,
+        "tls_ms": 13.2,
+        "handshake_ms": 21.0,
+        "request_ms": 52.6,
+        "total_ms": 73.5
+      },
+      "warm": {
+        "handshake_ms": 8.8,
+        "req1_total_ms": 61.3,
+        "req2_request_ms": 9.6
+      }
+    },
+    {
+      "pair": 3,
+      "nodelay": true,
+      "tls_version": "TLSv1.3",
+      "cipher": "TLS_AES_256_GCM_SHA384",
+      "cold": {
+        "tcp_ms": 1.5,
+        "tls_ms": 6.2,
+        "handshake_ms": 7.7,
+        "request_ms": 10.0,
+        "total_ms": 17.7
+      },
+      "warm": {
+        "handshake_ms": 8.0,
+        "req1_total_ms": 15.7,
+        "req2_request_ms": 7.4
+      }
+    },
+    {
+      "pair": 4,
+      "nodelay": false,
+      "tls_version": "TLSv1.3",
+      "cipher": "TLS_AES_256_GCM_SHA384",
+      "cold": {
+        "tcp_ms": 2.1,
+        "tls_ms": 5.2,
+        "handshake_ms": 7.4,
+        "request_ms": 49.2,
+        "total_ms": 56.6
+      },
+      "warm": {
+        "handshake_ms": 7.7,
+        "req1_total_ms": 57.1,
+        "req2_request_ms": 10.0
+      }
+    },
+    {
+      "pair": 4,
+      "nodelay": true,
+      "tls_version": "TLSv1.3",
+      "cipher": "TLS_AES_256_GCM_SHA384",
+      "cold": {
+        "tcp_ms": 1.9,
+        "tls_ms": 6.5,
+        "handshake_ms": 8.5,
+        "request_ms": 11.1,
+        "total_ms": 19.6
+      },
+      "warm": {
+        "handshake_ms": 7.3,
+        "req1_total_ms": 17.6,
+        "req2_request_ms": 9.0
+      }
+    },
+    {
+      "pair": 5,
+      "nodelay": false,
+      "tls_version": "TLSv1.3",
+      "cipher": "TLS_AES_256_GCM_SHA384",
+      "cold": {
+        "tcp_ms": 1.9,
+        "tls_ms": 5.6,
+        "handshake_ms": 7.5,
+        "request_ms": 52.4,
+        "total_ms": 60.0
+      },
+      "warm": {
+        "handshake_ms": 9.3,
+        "req1_total_ms": 64.0,
+        "req2_request_ms": 9.6
+      }
+    },
+    {
+      "pair": 5,
+      "nodelay": true,
+      "tls_version": "TLSv1.3",
+      "cipher": "TLS_AES_256_GCM_SHA384",
+      "cold": {
+        "tcp_ms": 1.9,
+        "tls_ms": 5.4,
+        "handshake_ms": 7.3,
+        "request_ms": 8.4,
+        "total_ms": 15.8
+      },
+      "warm": {
+        "handshake_ms": 7.1,
+        "req1_total_ms": 16.7,
+        "req2_request_ms": 12.1
+      }
+    }
+  ],
+  "summary": {
+    "nagle_default": {
+      "cold_handshake_ms": 7.4,
+      "cold_request_ms": 52.4,
+      "cold_total_ms": 60.0,
+      "warm_req2_ms": 9.8,
+      "tls_version": "TLSv1.3"
+    },
+    "nodelay": {
+      "cold_handshake_ms": 7.7,
+      "cold_request_ms": 9.2,
+      "cold_total_ms": 16.9,
+      "warm_req2_ms": 9.0,
+      "tls_version": "TLSv1.3"
+    }
+  }
+}
