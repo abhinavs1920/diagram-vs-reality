@@ -1,0 +1,4 @@
+# Checksums of the bytes committed to this folder (GitHub web editor adds a trailing newline; these cover the committed files).
+28c245f37a384d5a9dc4bbdb8179afa693ab49717cca798fe51bfd677757fb8b  run.py
+08d3c5221092d9550ed132d7ae34ad84eeee9fcf0429cbab71851b6bb0f4f0ff  results.json
+16d95b293aa286a0f7bf857c463b1f7589fa8a69696d49a66924d6c398df2fce  README.md
