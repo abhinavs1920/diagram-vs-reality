@@ -16,7 +16,7 @@ Each episode takes one claim, mechanism, or mental model - from a talk, a doc, o
 | # | Episode | What it tests |
 |---|---------|---------------|
 | 01 | [Abort is not a rollback](01-abort-is-not-a-rollback/) | Does aborting fetch cancel the server-side write? |
-| 02 | [One request is not one round trip](02-one-request-is-not-one-round-trip/) | Is an HTTPS request just one round trip? |
+| 02 | [I nearly blamed the handshake](02-one-request-is-not-one-round-trip/) | Is an HTTPS request just one round trip - and was it even the handshake? |
 
 ## Episode 01 in one paragraph
 
@@ -24,8 +24,7 @@ Local Node fetch to a Python HTTP handler writing to SQLite. 100 ms abort timer,
 
 ## Episode 02 in one paragraph
 
-Real HTTPS requests to example.com with raw Python sockets, 5 interleaved pairs, HTTP/1.1, DNS excluded. A cold request on a fresh connection took 75.1 ms (16.3 ms TCP + TLS handshake, then 58.2 ms for the request itself); the next request on that same connection took 12.6 ms. The measured handshake explains only part of the gap; the rest was not isolated, so no cause is claimed. Inspired by Hussein Nasser's "Persistent Connections" - one host, one network, an observation, not a law.
-
+Real HTTPS requests to example.com with raw Python sockets, HTTP/1.1, TLS 1.3, DNS excluded, 5 paired runs per variant on one cloud machine. A fresh connection's first full response took ~60 ms with a default socket; with TCP_NODELAY set on the client socket the same took ~17 ms; a request on an already-open connection took ~9-10 ms; measured TCP + TLS setup was ~7-8 ms. The client socket's TCP_NODELAY setting accounted for the remaining difference in this setup; the packet-level mechanism was not traced. Concept credit: Hussein Nasser's "Persistent Connections" (the TCP_NODELAY control is this repo's own follow-up, not from that article). One host, one network - an observation, not a law.
 
 ## Disagree? Good.
 
