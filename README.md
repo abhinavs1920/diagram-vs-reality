@@ -16,10 +16,16 @@ Each episode takes one claim, mechanism, or mental model - from a talk, a doc, o
 | # | Episode | What it tests |
 |---|---------|---------------|
 | 01 | [Abort is not a rollback](01-abort-is-not-a-rollback/) | Does aborting fetch cancel the server-side write? |
+| 02 | [One request is not one round trip](02-one-request-is-not-one-round-trip/) | Is an HTTPS request just one round trip? |
 
 ## Episode 01 in one paragraph
 
 Local Node fetch to a Python HTTP handler writing to SQLite. 100 ms abort timer, 400 ms handler delay, no cancellation propagation in the handler. The client aborted at ~101 ms; the handler committed the order anyway at ~426 ms. An unkeyed retry created a second order; a retry with the same idempotency key did not (SQLite UNIQUE constraint). 5 trials per case, same result every time. Inspired by Hussein Nasser's "why it is very hard to cancel an HTTP request" (2021) - this tests one small mechanism, not his whole video.
+
+## Episode 02 in one paragraph
+
+Real HTTPS requests to example.com with raw Python sockets, 5 interleaved pairs, HTTP/1.1, DNS excluded. A cold request on a fresh connection took 75.1 ms (16.3 ms TCP + TLS handshake, then 58.2 ms for the request itself); the next request on that same connection took 12.6 ms. The measured handshake explains only part of the gap; the rest was not isolated, so no cause is claimed. Inspired by Hussein Nasser's "Persistent Connections" - one host, one network, an observation, not a law.
+
 
 ## Disagree? Good.
 
