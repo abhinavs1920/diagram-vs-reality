@@ -1,0 +1,17 @@
+timeout=5s on every case; server dribbles 1 byte / 0.4s on /drip
+  A silence  trial 1:   5.01s  raised TimeoutError
+  A silence  trial 2:   5.01s  raised TimeoutError
+  A silence  trial 3:   5.01s  raised TimeoutError
+  A silence  trial 4:   5.01s  raised TimeoutError
+  A silence  trial 5:   5.01s  raised TimeoutError
+  B drip     trial 1:  39.67s  completed, 100 bytes
+  B drip     trial 2:  39.67s  completed, 100 bytes
+  B drip     trial 3:  39.67s  completed, 100 bytes
+  B drip     trial 4:  39.67s  completed, 100 bytes
+  B drip     trial 5:  39.67s  completed, 100 bytes
+  C deadline trial 1:   5.00s  gave up: total deadline hit (body), 13 bytes read
+  C deadline trial 2:   5.00s  gave up: total deadline hit (body), 13 bytes read
+  C deadline trial 3:   5.00s  gave up: total deadline hit (body), 13 bytes read
+  C deadline trial 4:   5.00s  gave up: total deadline hit (body), 13 bytes read
+  C deadline trial 5:   5.00s  gave up: total deadline hit (body), 13 bytes read
+wrote results.json
