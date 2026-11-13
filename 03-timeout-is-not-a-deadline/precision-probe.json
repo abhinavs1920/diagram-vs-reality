@@ -1,0 +1,9 @@
+{
+  "A_silence_timeout5_raw_s": 5.006822585000009,
+  "A_outcome": "raised TimeoutError",
+  "B_drip_timeout5_raw_s": 39.66863823600002,
+  "B_outcome": "completed 100b",
+  "C_drip_deadline5_raw_s": 5.000479967000018,
+  "C_outcome": "deadline stop 13b",
+  "note": "single-trial full-precision probe, same code paths as client.py"
+}
