@@ -107,7 +107,7 @@ def run(label, fn):
 
 
 if __name__ == "__main__":
-    print(f"timeout={TIMEOUT}s on every case; server dribbles 1 byte / 0.4s on /drip")
+    print(f"A,B: http.client timeout={TIMEOUT} (per blocking op); C: raw socket, caller deadline {TIMEOUT}s; /drip dribbles 1 byte / 0.4s")
     results = {
         "A_silence_timeout5": run("A silence ", case_silence),
         "B_drip_timeout5": run("B drip    ", case_drip),
