@@ -1,0 +1,83 @@
+{
+  "A_silence_timeout5": [
+    {
+      "trial": 1,
+      "elapsed_s": 5.01,
+      "outcome": "raised TimeoutError"
+    },
+    {
+      "trial": 2,
+      "elapsed_s": 5.01,
+      "outcome": "raised TimeoutError"
+    },
+    {
+      "trial": 3,
+      "elapsed_s": 5.01,
+      "outcome": "raised TimeoutError"
+    },
+    {
+      "trial": 4,
+      "elapsed_s": 5.01,
+      "outcome": "raised TimeoutError"
+    },
+    {
+      "trial": 5,
+      "elapsed_s": 5.01,
+      "outcome": "raised TimeoutError"
+    }
+  ],
+  "B_drip_timeout5": [
+    {
+      "trial": 1,
+      "elapsed_s": 39.67,
+      "outcome": "completed, 100 bytes"
+    },
+    {
+      "trial": 2,
+      "elapsed_s": 39.67,
+      "outcome": "completed, 100 bytes"
+    },
+    {
+      "trial": 3,
+      "elapsed_s": 39.67,
+      "outcome": "completed, 100 bytes"
+    },
+    {
+      "trial": 4,
+      "elapsed_s": 39.67,
+      "outcome": "completed, 100 bytes"
+    },
+    {
+      "trial": 5,
+      "elapsed_s": 39.67,
+      "outcome": "completed, 100 bytes"
+    }
+  ],
+  "C_drip_deadline5": [
+    {
+      "trial": 1,
+      "elapsed_s": 5.0,
+      "outcome": "gave up: total deadline hit (body), 13 bytes read"
+    },
+    {
+      "trial": 2,
+      "elapsed_s": 5.0,
+      "outcome": "gave up: total deadline hit (body), 13 bytes read"
+    },
+    {
+      "trial": 3,
+      "elapsed_s": 5.0,
+      "outcome": "gave up: total deadline hit (body), 13 bytes read"
+    },
+    {
+      "trial": 4,
+      "elapsed_s": 5.0,
+      "outcome": "gave up: total deadline hit (body), 13 bytes read"
+    },
+    {
+      "trial": 5,
+      "elapsed_s": 5.0,
+      "outcome": "gave up: total deadline hit (body), 13 bytes read"
+    }
+  ]
+}
