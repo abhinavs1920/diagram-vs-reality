@@ -1,4 +1,5 @@
-timeout=5s on every case; server dribbles 1 byte / 0.4s on /drip
+$ python3 client.py
+A,B: http.client timeout=5 (per blocking op); C: raw socket, caller deadline 5s; /drip dribbles 1 byte / 0.4s
   A silence  trial 1:   5.01s  raised TimeoutError
   A silence  trial 2:   5.01s  raised TimeoutError
   A silence  trial 3:   5.01s  raised TimeoutError
