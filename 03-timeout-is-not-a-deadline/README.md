@@ -10,11 +10,11 @@ Python stdlib only. No installs, no network beyond localhost. Tested client: Pyt
 - `client.py` - three cases, 5 trials each, all on `127.0.0.1`:
   - **A** - GET `/silence` with `timeout=5`.
   - **B** - GET `/drip` with the same `timeout=5`.
-  - **C** - GET `/drip` again, but the caller budgets the whole operation itself and gives up at 5 s.
+  - **C** - GET `/drip` again, this time over a raw socket (no http.client): the caller budgets the whole operation itself and gives up at 5 s.
 
 Per the http.client docs, the `timeout` parameter applies to blocking operations (https://docs.python.org/3/library/http.client.html#http.client.HTTPConnection) - per connect, per read - not to the call as a whole. The requests library is not used here; its timeout docs state the same semantics more plainly and are cited as the analogous reference: its read timeout is "the number of seconds that the client will wait between bytes sent from the server" (https://requests.readthedocs.io/en/latest/user/advanced/#timeouts).
 
-Case C's deadline is enforced by the caller: the remaining budget is recomputed before connect and before every read (`select` with the remaining time), and the call is abandoned when the budget is spent. It checks between reads; it is not a hard interruption. Anything blocked outside those reads (a DNS lookup, or a TLS handshake inside one blocking call) would not be preempted by this pattern. No DNS was involved here (127.0.0.1 literal).
+Case C's deadline is enforced by the caller on a raw socket: the remaining budget is recomputed before connect and before every read (`select` with the remaining time), and the call is abandoned when the budget is spent. It checks between reads; it is not a hard interruption. Anything blocked outside those reads (a DNS lookup, or a TLS handshake inside one blocking call) would not be preempted by this pattern. No DNS was involved here (127.0.0.1 literal).
 
 ## Expectation (written before the run)
 
@@ -30,7 +30,7 @@ A raises around 5 s. B runs to completion far past 5 s without any error, becaus
 
 The same `timeout=5` that caught a silent server in 5 seconds let a slow one run for 8x that. The timeout never fired in B because it was never exceeded - each single read got its byte in 0.4 s.
 
-Full output: `run1-console.txt`. Numbers: `results.json` (elapsed times rounded to 2 dp; a full-precision probe of one trial per case is in `precision-probe.json`: A 5.0068 s, B 39.6686 s, C 5.0005 s; repeated trials agree to ~10 ms because the 0.4 s server sleeps dominate and localhost scheduling is stable). The chart and the rendered console transcript (`03-timeout-results.png`, `03-console.png` - a rendering of the transcript, not a native screen capture) are pending upload to this folder; they are attached to the episode post in the meantime.
+Full output: `run1-console.txt`. Numbers: `results.json` (elapsed times rounded to 2 dp; a full-precision probe of one trial per case is in `precision-probe.json`: A 5.0068 s, B 39.6686 s, C 5.0005 s; repeated trials agree to ~10 ms because the 0.4 s server sleeps dominate and localhost scheduling is stable). The chart and a terminal screenshot of the run (`03-timeout-results.png`, `03-terminal.png`) are pending upload to this folder; they are attached to the episode post in the meantime.
 
 ## Limits
 
