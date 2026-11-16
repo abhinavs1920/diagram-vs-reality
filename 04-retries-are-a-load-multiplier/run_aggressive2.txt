@@ -1,0 +1,7 @@
+mode=aggressive
+logical calls=1952 succeeded=1912 failed=40
+median latency=51ms
+brown cohort (calls STARTED in window): calls=60 succeeded=20 (33.3%) requests=360 req/call=6.0 p95=3613ms
+aggressive brown successes end-times: 18.6,18.6,18.6,18.6,18.6,18.6,18.6,18.6,18.6,18.6,18.6,18.6,18.6,18.6,18.6,18.6,18.6,18.6,18.6,18.6
+brown successes that ended BEFORE t=18 (would contradict all-abandon): 0
+total requests seen: 2252
