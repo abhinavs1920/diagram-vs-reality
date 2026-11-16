@@ -1,0 +1,5 @@
+mode=patient
+logical calls=1955 succeeded=1881 failed=74
+median latency=51ms
+brown cohort (calls STARTED in window): calls=140 succeeded=66 (47.1%) requests=140 req/call=1.0 p95=1503ms
+total requests seen: 1955
