@@ -1,0 +1,5 @@
+mode=budgeted
+logical calls=1955 succeeded=1910 failed=45
+median latency=51ms
+brown cohort (calls STARTED in window): calls=120 succeeded=75 (62.5%) requests=175 req/call=1.5 p95=2003ms
+total requests seen: 2010
