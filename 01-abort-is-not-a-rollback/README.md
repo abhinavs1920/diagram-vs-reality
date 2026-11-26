@@ -22,7 +22,7 @@ The script binds only to 127.0.0.1 on a temporary port, creates a fresh local `o
 - Each of four scenarios runs five times: no abort, abort only, abort followed by one unkeyed retry, abort followed by one same-key retry.
 - Only the same-key case uses the SQLite UNIQUE idempotency-key constraint.
 - The server finishes after the client abort and sees a broken/closed connection when writing its response in the representative trial.
-- `results.json` contains every trial count and event trace. The two summary visuals (being added to this folder) are drawn from these measured records, not invented sample output.
+- `results.json` contains every trial count and event trace. The two summary visuals (`01-abort-trace.png`, `02-retry-results.png`, in this folder) are drawn from these measured records, not invented sample output.
 
 ## What I expected (written before running it)
 
@@ -30,7 +30,7 @@ When a handler does not propagate cancellation, aborting fetch will not cancel i
 
 ## What happened
 
-All five trials per case matched: control 1 order; abort only 1 order; unkeyed retry 2 orders; same-key retry 1 order. All aborted cases produced client AbortError before a database commit. Exact representative timings are in the raw trace (and in the summary visual being added).
+All five trials per case matched: control 1 order; abort only 1 order; unkeyed retry 2 orders; same-key retry 1 order. All aborted cases produced client AbortError before a database commit. Exact representative timings are in the raw trace (and in `01-abort-trace.png`).
 
 ## Limits
 
