@@ -38,3 +38,5 @@ Healthy phases were identical across arms (51ms median).
 Localhost toy. One failure shape (slow + 50% error). Closed-loop clients, so policies produce different numbers of logical calls (latency shapes throughput) - compare per-call ratios and percentages, not absolute call counts. The three arms differ in timeout AND retry count by design: this compares whole policies, and the aggressive-vs-patient pair is the "retry faster vs wait longer" choice, not a single-variable isolation of retries. Two runs agree on direction; treat the exact numbers as this toy's numbers, not production values.
 
 Credit: Hussein Nasser's point that a retry looks benign in a single client until the clients scale (https://www.linkedin.com/posts/hnaser_retrying-a-request-may-look-benign-when-writing-activity-7337847492807376896-Cxa1). Testing one mechanism, not debunking anyone.
+
+Images: `04-retry-load.png` (requests per second per policy, from the hits CSVs) and `04-policy-results.png` (the table above, from `run_*2.txt`).
