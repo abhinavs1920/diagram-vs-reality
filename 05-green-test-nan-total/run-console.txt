@@ -1,0 +1,6 @@
+trial 1: mocked test PASS | real API 200 | subtotal NaN | json {"subtotalCents":null} | control 199800
+trial 2: mocked test PASS | real API 200 | subtotal NaN | json {"subtotalCents":null} | control 199800
+trial 3: mocked test PASS | real API 200 | subtotal NaN | json {"subtotalCents":null} | control 199800
+trial 4: mocked test PASS | real API 200 | subtotal NaN | json {"subtotalCents":null} | control 199800
+trial 5: mocked test PASS | real API 200 | subtotal NaN | json {"subtotalCents":null} | control 199800
+RESULT: 5/5 trials, mocked test green, real call 200, subtotal NaN

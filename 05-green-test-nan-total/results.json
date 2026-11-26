@@ -1,0 +1,75 @@
+{
+  "node": "v22.23.5",
+  "trials": [
+    {
+      "trial": 1,
+      "mocked_test_passed": true,
+      "provider_status": 200,
+      "provider_fields": [
+        "id",
+        "name",
+        "unitPriceCents"
+      ],
+      "real_subtotal": "NaN",
+      "real_subtotal_is_nan": true,
+      "real_subtotal_as_json": "{\"subtotalCents\":null}",
+      "control_subtotal_with_unitPriceCents": 199800
+    },
+    {
+      "trial": 2,
+      "mocked_test_passed": true,
+      "provider_status": 200,
+      "provider_fields": [
+        "id",
+        "name",
+        "unitPriceCents"
+      ],
+      "real_subtotal": "NaN",
+      "real_subtotal_is_nan": true,
+      "real_subtotal_as_json": "{\"subtotalCents\":null}",
+      "control_subtotal_with_unitPriceCents": 199800
+    },
+    {
+      "trial": 3,
+      "mocked_test_passed": true,
+      "provider_status": 200,
+      "provider_fields": [
+        "id",
+        "name",
+        "unitPriceCents"
+      ],
+      "real_subtotal": "NaN",
+      "real_subtotal_is_nan": true,
+      "real_subtotal_as_json": "{\"subtotalCents\":null}",
+      "control_subtotal_with_unitPriceCents": 199800
+    },
+    {
+      "trial": 4,
+      "mocked_test_passed": true,
+      "provider_status": 200,
+      "provider_fields": [
+        "id",
+        "name",
+        "unitPriceCents"
+      ],
+      "real_subtotal": "NaN",
+      "real_subtotal_is_nan": true,
+      "real_subtotal_as_json": "{\"subtotalCents\":null}",
+      "control_subtotal_with_unitPriceCents": 199800
+    },
+    {
+      "trial": 5,
+      "mocked_test_passed": true,
+      "provider_status": 200,
+      "provider_fields": [
+        "id",
+        "name",
+        "unitPriceCents"
+      ],
+      "real_subtotal": "NaN",
+      "real_subtotal_is_nan": true,
+      "real_subtotal_as_json": "{\"subtotalCents\":null}",
+      "control_subtotal_with_unitPriceCents": 199800
+    }
+  ]
+}
