@@ -23,7 +23,9 @@ Each episode takes one claim, mechanism, or mental model - from a talk, a doc, o
 |---|---------|---------------|
 | 01 | [Abort is not a rollback](01-abort-is-not-a-rollback/) | Does aborting fetch cancel the server-side write? |
 | 02 | [I nearly blamed the handshake](02-one-request-is-not-one-round-trip/) | Is an HTTPS request just one round trip - and was it even the handshake? |
+| 03 | [A timeout is not a deadline](03-timeout-is-not-a-deadline/) | Does a 5 s client timeout bound the call? |
 | 04 | [Retries are a load multiplier](04-retries-are-a-load-multiplier/) | Do instant retries help a sick server? |
+| 05 | [My test passed. The total was NaN.](05-green-test-nan-total/) | Does a green mocked consumer test survive a field rename? |
 
 
 ## Episode 01 in one paragraph
