@@ -30,7 +30,7 @@ A raises around 5 s. B runs to completion far past 5 s without any error, becaus
 
 The same `timeout=5` that caught a silent server in 5 seconds let a slow one run for 8x that. The timeout never fired in B because it was never exceeded - each single read got its byte in 0.4 s.
 
-Full output: `run1-console.txt`. Numbers: `results.json` (elapsed times rounded to 2 dp; a full-precision probe of one trial per case is in `precision-probe.json`: A 5.0068 s, B 39.6686 s, C 5.0005 s; repeated trials agree to ~10 ms because the 0.4 s server sleeps dominate and localhost scheduling is stable). The chart and a terminal screenshot of the run (`03-timeout-results.png`, `03-terminal.png`) are pending upload to this folder; they are attached to the episode post in the meantime.
+Full output: `run1-console.txt`. Numbers: `results.json` (elapsed times rounded to 2 dp; a full-precision probe of one trial per case is in `precision-probe.json`: A 5.0068 s, B 39.6686 s, C 5.0005 s; repeated trials agree to ~10 ms because the 0.4 s server sleeps dominate and localhost scheduling is stable). The chart and a terminal screenshot of the run (`03-timeout-results.png`, `03-terminal.png`) are in this folder.
 
 ## Limits
 
